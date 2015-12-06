@@ -14,8 +14,7 @@ oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
 
 twitter_stream = TwitterStream(auth=oauth)
 
-iterator = twitter_stream.statuses.filter(track="Kill", language="en")
-twitter_userstream = TwitterStream(auth=oauth, domain='userstream.twitter.com')
+
 
 tweet_count =100
 for tweet in iterator:
@@ -24,3 +23,4 @@ for tweet in iterator:
          
     if tweet_count <= 0:
         break
+
